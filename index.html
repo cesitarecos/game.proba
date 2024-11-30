@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PROBABILIDAD - CALCULADORA %</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="imagenes/BAstos.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table id="deckTable"></table>
+
+    <p id="resultado">Selecciona tus cartas</p>
+
+    <div id="depurando" style="display: flex;">
+        <div style="flex: 1;">
+            <p id="sum"></p>
+            <p id="count"></p>
+            <p>----------</p>
+            <p id="numOros"></p>
+            <p id="numCopas"></p>
+            <p id="numEspadas"></p>
+            <p id="numBastos"></p>
+            <p>----------</p>
+            <p id="minOros"></p>
+            <p id="minCopas"></p>
+            <p id="minEspadas"></p>
+            <p id="minBastos"></p>
+        </div>
+        <div style="flex: 1;">
+            <p id="probability"></p>
+            <p id="probabilityLose"></p>
+            <p id="probabilityTotal"></p>
+            <p>----------</p>
+            <p id="debug"></p>
+            <p>----------</p>
+            <p id="debug2"></p>
+            <p id="funcion"></p>
+        </div>
+        <div style="flex: 1;">
+            <p id="orosSuperiores"></p>
+            <p id="copasSuperiores"></p>
+            <p id="espadasSuperiores"></p>
+            <p id="bastosSuperiores"></p>
+            <p>----------</p>
+            <p id="orosInferiores"></p>
+            <p id="copasInferiores"></p>
+            <p id="espadasInferiores"></p>
+            <p id="bastosInferiores"></p>
+        </div>
+    </div>
+
+
+    <button id="resetButton">Reiniciar c&aacute;lculos</button>
+    <script src="scripts.js"></script>
+</html>

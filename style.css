@@ -1,0 +1,158 @@
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+td {
+    border: none;
+    padding: 2px;
+}
+
+tr {
+    display: grid;
+    grid-template-columns: 30px repeat(10, 1fr);
+}
+
+button {
+    width: 100%;
+    height: 110px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    font-size: auto;
+    font-style: bold;
+    font-family: "Arial", sans-serif;
+    text-shadow: 0 0 5px rgb(112, 218, 199);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+
+button .text {
+    position: relative;
+    z-index: 2;
+}
+
+.palo-img-fondo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.2; /* Ajusta para transparencia */
+    z-index: 1;
+}
+
+button:hover{
+    background-color: #45a049;
+}
+
+
+
+.palo-image img {
+    width: 30px;
+    height: auto;
+}
+
+
+
+#resetButton {
+        width: 100%;
+        height: 50px;
+        background-color: #FF5252;
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+#resetButton:hover {
+    background-color: #FF0000;
+}
+
+
+/* Estilo para el marco de la carta seleccionada */
+.selected {
+    border: 3px solid lightgreen;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+/* Estilo para el marco de la carta seleccionada cuando hay más de 3 cartas pulsadas */
+.selected.red {
+    border: 3px solid #FF5252;
+    box-shadow: 0 0 10px rgba(255, 82, 82, 0.5);
+}
+
+#resultado {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera para un efecto elevado */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    height: 10%; /* Altura fija de 100px */
+}
+
+
+/* Estilos para adaptar el contenido al ancho de pantalla */
+@media (max-width: 760px) {
+    table {
+        display: flex;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+        padding: 2px;
+    }
+
+    tr {
+        margin-bottom: 10px;
+    }
+
+    td {
+        display: flex;
+        justify-content: center;
+        padding: 2px;
+        border: none;
+    }
+
+    button {
+        width: 100%;
+        height: calc(65vh / 10);
+        /* Ajustar tamaño de texto para que quepa en la anchura de pantalla */
+        font-size: calc(70vh / 30 / 2);
+
+        /* Si el texto no cabe por anchura, debe ocultarse y mostrarse con puntos suspensivos */
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+    }
+
+    .palo-image img {
+        width: auto;
+        height: 30px;
+    }
+    
+}
